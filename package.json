@@ -5,9 +5,8 @@
   "main": "main.js",
   "author": "Muhammad Aqib (mrpythonist)",
   "private": true,
-  "type": "module",
   "scripts": {
-    "electron": "cross-env NODE_ENV=dev nodemon --exec \"\"electron .\"\"",
+    "electron": "cross-env NODE_ENV=dev nodemon --exec \"\"electron . --no-sandbox --disable-setuid-sandbox\"\"",
     "electron-build": "electron-builder"
   },
   "dependencies": {
