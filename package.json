@@ -1,0 +1,52 @@
+{
+  "name": "agent-monitor",
+  "version": "1.0.0",
+  "description": "Agent Monitoring application for screen and webcam sharing made in electron JS",
+  "main": "main.js",
+  "author": "Muhammad Aqib (mrpythonist)",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "electron": "cross-env NODE_ENV=dev nodemon --exec \"\"electron .\"\"",
+    "electron-build": "electron-builder"
+  },
+  "dependencies": {
+    "ws": "^8.13.0",
+    "systeminformation": "^5.17.0",
+    "cross-env": "^7.0.3"
+  },
+  "devDependencies": {
+    "electron": "^22.0.0",
+    "electron-builder": "^24.0.0",
+    "nodemon": "^3.1.10"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "build": {
+    "appId": "com.mrpythonist.agent-monitor",
+    "productName": "Agent Monitor",
+    "directories": {
+      "buildResources": "assets",
+      "output": "dist"
+    },
+    "files": [
+      "**/*"
+    ],
+    "win": {
+      "target": [
+        "msi"
+      ],
+      "icon": "assets/icon.ico"
+    }
+  }
+}
